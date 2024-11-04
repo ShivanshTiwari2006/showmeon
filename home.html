@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShowMeOn</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+
+<!-- i have used bootstrap to maintain the fonts and the used library to make it look professional -->
+ 
+<body>
+    <header>
+        <div class="container"> 
+            <div class="logo">ShowMeOn</div>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="category.html">Categories <i class="fas fa-caret-down"></i></a></li>
+                    <li><a href="#">Watchlist</a></li>
+                    <li><a href="movies.html">Movies</a></li>
+                </ul>
+            </nav>
+            <div class="profile-area">
+                <button class="upgrade-button" onclick="window.open('/premium.html')"><i class="fas fa-crown"></i> Upgrade to Premium</button>
+            </div>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>2 Seasons | Series</h1>
+                        <h2>Vinland Saga</h2>
+                        <div class="tags">
+                            <span>Senien</span>
+                            <span>Action</span>
+                            <span>Adventure</span>
+                            <span>Historical</span>
+                        </div>
+                        <div class="rating">
+                            <span class="stars">★★★★</span>
+                            <span class="score">4.3</span>
+                        </div>
+                        <p class="description">A young Viking named Thorfinn who seeks revenge for his father's murder. The story takes place in 1013 AD, when Vinland was a safe haven for Vikings. Thorfinn witnesses his father's death at the hands of Viking commander Askeladd, and later becomes Askeladd's servant to earn the right to challenge him to a duel.</p>
+                        <div class="buttons">
+                            <button class="watch" onclick="window.open('/movies/vinlandsaga.html')">Watch</button>
+                            <button class="watchlist">+ Add to watchlist</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="styles/vinland-saga.jpg" alt="Vinland-Saga">
+                </div>
+            </div>
+        </section>        
+        <hr />
+        <section class="light-novels">
+            <div class="container">
+                <h3>Light Novels</h3>
+                <div class="novel-carousel">
+                    <div class="novel-card">
+                        <img src="styles/rezero.png" alt="Re:Zero">
+                        <div class="novel-info">
+                            <p class="title">Re:Zero</p>
+                            <p class="synopsis">Subaru Natsuki is suddenly transported to another world. Thrown into a world of danger, Subaru realizes that he has the power to reverse time by dying, though he remains the only one who knows. He must fight against despair and death to save those he loves.</p>
+                        </div>
+                    </div>
+                    <div class="novel-card">
+                        <img src="styles/Front Cover Art (1).png" alt="Mushoku Tensei">
+                        <div class="novel-info">
+                            <p class="title">The Reverie Of The Verdeland</p>
+                            <p class="synopsis"></p>
+                        </div>
+                    </div>
+                    <div class="novel-card">
+                        <img src="styles/musukotensei.png"alt="No Game No Life">
+                        <div class="novel-info">
+                            <p class="title">Musuko Tensei</p>
+                            <p class="synopsis">Sora and Shiro, a brother and sister duo, are undefeated gamers who are challenged to a chess match by a god from another world. After winning, they are transported to a world where all conflicts are resolved through games. Their ultimate goal: defeat the god and take his throne.</p>
+                        </div>
+                    </div>
+                    <div class="novel-card">
+                        <img src="styles/novel4.jpg" alt="Overlord">
+                        <div class="novel-info">
+                            <p class="title">Overlord</p>
+                            <p class="synopsis">When a popular MMORPG is shut down, the powerful overlord Momonga finds himself trapped in the game world. With no way to log out, he decides to take over the new world and finds out if anyone else is stuck in the game like him.</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+    <hr />
+    <section>
+
+    </section>
+    <section class="trending-movies">
+        <div class="container">
+            <h3>Trending Movies/Anime</h3>
+            <div class="trending-list">
+                <div class="movie-card">
+                    <div class="ranking">#1</div>
+                    <img src="styles/pluto.jpg" alt="Movie 1 Poster">
+                    <div class="movie-info">
+                        <p class="title">Pluto</p>
+                    </div>
+                </div>
+    
+                <div class="movie-card">
+                    <div class="ranking">#2</div>
+                    <img src="styles/bhaubhali2.png" alt="Movie 2 Poster">
+                    <div class="movie-info">
+                        <p class="title">Bahubali 2</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <div class="ranking">#3</div>
+                    <img src="styles/urimovie.png" alt="Uri The Surugical Strike">
+                    <div class="movie-info">
+                        <p class="title">Uri</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <div class="ranking">#4</div>
+                    <img src="styles/yourname.png" alt="Your Name">
+                    <div class="movie-info">
+                        <p class="title">Your Name</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <div class="ranking">#5</div>
+                    <img src="styles/attackontitanmovie.png" alt="attack on titan movie">
+                    <div class="movie-info">
+                        <p class="title">Attack On Titan Movie</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <div class="ranking">#6</div>
+                    <img src="styles/hackedmovie.png" alt="hackedmovie">
+                    <div class="movie-info">
+                        <p class="title">Hacked</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <div class="ranking">#7</div>
+                    <img src="styles/animalmovie.png" alt="Movie 2 Poster">
+                    <div class="movie-info">
+                        <p class="title">Animal </p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <div class="ranking">#8</div>
+                    <img src="styles/avangersendgame.png" alt="Movie 2 Poster">
+                    <div class="movie-info">
+                        <p class="title">Avangers End Game</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <div class="ranking">#9</div>
+                    <img src="styles/movie2.jpg" alt="Movie 2 Poster">
+                    <div class="movie-info">
+                        <p class="title">Movie Title 2</p>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <div class="ranking">#10</div>
+                    <img src="styles/movie2.jpg" alt="Movie 2 Poster">
+                    <div class="movie-info">
+                        <p class="title">Movie Title 2</p>
+                        <button class="watch-now">Watch Now</button>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+<section class="popular-shows">
+    <div class="container">
+        <h3>Popular TV Shows</h3>
+        <div class="shows-list">
+        </div>
+    </div>
+</section>
+
+<section class="genres">
+    <div class="container">
+        <h3>Browse by Genre</h3>
+        <div class="genre-tags">
+            <span>Action</span>
+            <span>Romance</span>
+            <span>Comedy</span>
+            <span>Drama</span>
+            <span>Adventure</span>
+        </div>
+    </div>
+</section>
+
+<section class="newsletter">
+    <div class="container">
+        <h3>Subscribe to Our Newsletter</h3>
+        <form>
+            <input type="email" placeholder="Enter your email">
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2024 ShowMeOn. All Rights Reserved.</p>
+        <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+        <div class="social-media">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</footer>
+
+         
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

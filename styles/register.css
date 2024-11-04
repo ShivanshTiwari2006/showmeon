@@ -1,0 +1,219 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body, html {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0f0e1a;
+  overflow: hidden;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  background: #1b1b32;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.login-section, .welcome-section {
+  width: 50%;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-section {
+  background: #101025;
+  color: #fff;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 50px;
+  color: #f72585;
+}
+
+form .field {
+  position: relative;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+form .field input {
+  width: 100%;
+  padding: 15px 20px 15px 45px;
+  background: #252546;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  font-size: 18px;
+  color: #f8f9fa;
+  outline: none;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+form .field input:focus {
+  border-color: #6c63ff;
+  background: #202036;
+}
+
+form .field label {
+  position: absolute;
+  top: 50%;
+  left: 45px;
+  color: #8c8ebf;
+  font-size: 16px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+}
+
+form .field input:focus + label,
+form .field input:not(:placeholder-shown) + label {
+  top: -10px;
+  font-size: 12px;
+  color: #9d4edd;
+}
+
+form .field .icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #6c63ff;
+}
+
+.extra-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+.extra-options a {
+  color: #9d4edd;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.extra-options a:hover {
+  color: #d6b3ff;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #f72585, #9d4edd);
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(247, 37, 133, 0.3);
+}
+
+.sign-up {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #8c8ebf;
+}
+
+.sign-up a {
+  color: #9d4edd;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.sign-up a:hover {
+  color: #f8f9fa;
+}
+
+.welcome-section {
+  position: relative;
+  background: url('loginpagewala.png') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: blurIn 1s forwards ease-in-out 1s;
+}
+
+.welcome-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  transition: backdrop-filter 1s ease-in-out;
+}
+
+.welcome-section h1, .welcome-section p {
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards ease-in-out 1.5s;
+}
+
+.welcome-section p {
+  animation-delay: 1.7s;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #d3d3e7;
+}
+
+@keyframes fadeInUp {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes blurIn {
+  0% {
+      backdrop-filter: blur(0px);
+  }
+  100% {
+      backdrop-filter: blur(8px);
+  }
+}
+
+/* I have used @media query with max-width to specify the device size(mobile screen) Responsive Styling */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+  }
+  .login-section, .welcome-section {
+      width: 100%;
+      padding: 30px;
+  }
+  .welcome-section h1 {
+      font-size: 36px;
+  }
+  .welcome-section p {
+      font-size: 16px;
+  }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Player</title>
+    <link rel="stylesheet" href="styles/moviestreaming.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">ShowMeOn</div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="dummy.html">Movies</a></li>
+                <li><a href="series.html">Series</a></li>
+                <li><a href="mylist.html">My List</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="sidebar">
+                <h2>List of episodes:</h2>
+                <input type="text" placeholder="Number of Ep" class="episode-search">
+                <ul class="episode-list">
+                    <li class="episode active">
+                        <span>1</span>
+                        <span>Sp1: genshisuru kami</span>
+                        <button class="play-button">▶</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="video-section">
+                <div class="breadcrumbs">
+                    <span>Home</span>
+                    <span>Special</span>
+                    <span>Watching Death Note: Relight</span>
+                </div>
+                <div class="video-wrapper">
+                    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+                        <iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden" frameborder="0" type="text/html" src="https://www.dailymotion.com/embed/video/kU0AsfjJgmZunuAY1bs" width="100%" height="100%" allowfullscreen title="Dailymotion Video Player"></iframe>
+                    </div>
+                </div>
+                <div class="video-controls">
+                    <span>Light <span class="status">On</span></span>
+                    <span>Auto Play <span class="status">On</span></span>
+                    <span>Auto Next <span class="status">On</span></span>
+                    <span>Auto Skip Intro <span class="status">On</span></span>
+                    <button class="control-button">Add to List</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="moviestreaming.js"></script>
+</body>
+</html>

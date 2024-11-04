@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Children Of The Sea</title>
+    <link rel="stylesheet" href="styles/childrenofthesea_info.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">ShowMeOn</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="moviestreaming.html">Movies</a></li>
+                <li><a href="series.html">Series</a></li>
+                <li><a href="mylist.html">My List</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="poster">
+                <img src="/movies/styles/childrenofthesea.png" alt="Children-Of-the-sea">
+                <div class="rating">15+</div>
+            </div>
+            <div class="details">
+                <nav class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span>•</span>
+                    <a href="!">Movies</a>
+                    <span>•</span>
+                    <a href="childrenofthesea_Info.html">Children Of The Sea</a>
+                </nav>
+                <h1> Children Of The Sea </h1>
+                <div class="tags">
+                    <span class="tag">R</span>
+                    <span class="tag">HD</span>
+                    <span class="tag">1</span>
+                    <span class="tag">Movie</span>
+                    <span class="tag">1hr 52min</span>
+                </div>
+                <div class="actions">
+                    <button class="watch-now" onclick="watchNow()">Watch now</button>
+                    <button class="add-to-list">Add to List</button>
+                </div>
+                <p>Ruka befriends two boys, Umi and Sora, who were raised in the sea by dugongs. In the process, she learns about the various secrets of the sky, the universe and her connection with the sea.</p>
+                <div class="share">
+                    <p>Share Anime to your friends</p>
+                    <div class="share-buttons">
+                        <button onclick="sharePopup()"><i class="fas fa-share-alt"></i> Share</button>
+                        <button><i class="fas fa-heart"></i> 26</button>
+                        <button><i class="fab fa-facebook"></i></button>
+                        <button><i class="fab fa-twitter"></i></button>
+                        <button><i class="fab fa-reddit"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar">
+                <p><strong>Japanese:</strong> 俺だけレベルアップな件</p>
+                <p><strong>Synonyms:</strong> Na Honjaman Level Up, I Level Up Alone, 나 혼자만 레벨업 </p>
+                <p><strong>Aired:</strong> Jan 7, 2024 to Mar 31, 2024</p>
+                <p><strong>Premiered:</strong> Winter 2024</p>
+                <p><strong>Duration:</strong> 24m</p>
+                <p><strong>Status:</strong> Finished Airing</p>
+                <p><strong>MAL Score:</strong> 8.39</p>
+                <p><strong>Genres:</strong> Action, adventure, fantasy</p>
+                <p><strong>Studios:</strong> A1 pictures</p>
+                <p><strong>Producers:</strong> Aniplex, Crunchyroll, D&C MEDIA</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Share Popup Modal -->
+    <div id="shareModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Share this link:</p>
+            <input type="text" value="http://example.com/childrenofthesea_Info.html" readonly>
+            <button onclick="copyLink()">Copy Link</button>
+        </div>
+    </div>
+    <script src="dummy.js"></script> 
+    
+    <script>
+        function watchNow() {
+            window.location.href = "/movies/childrenofthesea.html";
+        }
+
+        function sharePopup() {
+            var modal = document.getElementById("shareModal");
+            modal.style.display = "block";
+        }
+
+        function copyLink() {
+            var copyText = document.querySelector("#shareModal input");
+            copyText.select();
+            document.execCommand("copy");
+            alert("Link copied to clipboard: " + copyText.value);
+        }
+
+        // Get the modal
+        var modal = document.getElementById("shareModal");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>  
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <link rel="stylesheet" href="styles/movies.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">ShowMeOn</div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="series.html">Series</a></li>
+                <li><a href="mylist.html">My List</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+    <main>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search for movies...">
+            <button type="button" onclick="searchMovies()">Search</button>
+        </div>
+        
+        <div class="movie-list">
+            <h2>Movies</h2>
+            <div class="movie-item" onclick="location.href='/movies/childrenofthesea_info.html'">
+                <img src="styles/childrenofthesea.png" alt="Movie 1 Poster">
+                <span>Children of the Sea</span>
+            </div>
+            <div class="movie-item" onclick="location.href='/movies/thereturnofabhimanyu.html'">
+                <img src="styles/thereturnofabhimanyu.jpg" alt="Movie 2 Poster">
+                <span>The Return Of Abhimanyu</span>
+            </div>
+        </div>
+    </main>
+</body>
+<script>
+    function searchMovies() {
+    const searchInput = document.getElementById("search-input").value.toLowerCase();
+    const movies = document.querySelectorAll(".movie-item");
+
+    movies.forEach(movie => {
+        const title = movie.querySelector("span").textContent.toLowerCase();
+        if (title.includes(searchInput)) {
+            movie.style.display = "block"; 
+        } else {
+            movie.style.display = "none"; 
+        }
+    });
+}
+
+</script>
+</html>

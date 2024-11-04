@@ -1,0 +1,881 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: transparent;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    color: #333;
+    letter-spacing: 1px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ff6347;
+    transform: scale(1.1);
+}
+
+header .auth-buttons,
+header .upgrade-premium {
+    display: flex;
+    gap: 10px;
+}
+
+header .auth-buttons button,
+header .upgrade-premium button {
+    background-color: #ff5a5f;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .auth-buttons button.sign-in {
+    background-color: transparent;
+    border: 2px solid #ff5a5f;
+    color: #ff5a5f;
+}
+
+header .auth-buttons button:hover,
+header .upgrade-premium button:hover {
+    background-color: #ff3a3f;
+    transform: translateY(-2px);
+}
+
+header .auth-buttons button.sign-in:hover {
+    background-color: #ff5a5f;
+    color: white;
+}
+
+header .upgrade-premium button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .upgrade-premium button i {
+    font-size: 1.2em;
+}
+
+header .hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+header .hamburger i {
+    font-size: 1.8em;
+    color: #333;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 5%;
+}
+
+.hero-content {
+    position: absolute;
+    z-index: 2;
+    color: white;
+    padding: 25px;
+    text-align: left;
+    max-width: 650px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.hero-text {
+    font-family: 'Oswald', sans-serif;
+}
+
+.hero-text h1 {
+    font-size: 1.4em;
+    color: #ddd;
+    margin: 0;
+}
+
+.hero-text h2 {
+    font-size: 3.5em;
+    margin: 15px 0;
+    color: #fff;
+}
+
+.hero-text .tags {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.hero-text .tags span {
+    background-color: #ff5a5f;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.hero-text .rating {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.hero-text .rating .stars {
+    color: #ff5a5f;
+    margin-right: 10px;
+}
+
+.hero-text .description {
+    color: #ddd;
+    margin: 20px 0;
+}
+
+.hero-text .buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.hero-text .buttons button {
+    background-color: #ff5a5f;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero-text .buttons .watchlist {
+    background-color: transparent;
+    border: 2px solid #ff5a5f;
+    color: #ff5a5f;
+}
+
+.hero-text .buttons button:hover {
+    background-color: #ff3a3f;
+    transform: translateY(-2px);
+}
+
+.hero-text .buttons .watchlist:hover {
+    background-color: #ff5a5f;
+    color: white;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.more-like-this {
+    padding: 50px 0;
+    background-color: #e0f9ff;
+    border-radius: 28px;
+    margin-top: -50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.more-like-this h3 {
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2em;
+    color: #333;
+}
+
+.more-like-this .carousel-container {
+    position: relative;
+}
+
+.more-like-this .carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    padding-bottom: 20px;
+}
+
+.more-like-this .card {
+    flex: 0 0 auto;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.more-like-this .card img {
+    width: 100%;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.more-like-this .card:hover img {
+    transform: scale(1.05);
+}
+
+.more-like-this .card p {
+    margin: 10px 0 0;
+    color: #333;
+}
+
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-nav .nav-left,
+.carousel-nav .nav-right {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-nav .nav-left:hover,
+.carousel-nav .nav-right:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.profile-area {
+    display: flex;
+    align-items: center;
+}
+
+.upgrade-button {
+    background-color: #ffcc00;
+    border: none;
+    color: #333;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.upgrade-button i {
+    margin-right: 10px;
+}
+
+.upgrade-button:hover {
+    background-color: #ff4a47;
+    transform: translateY(-2px);
+}
+
+.novel-card:hover .novel-info {
+    opacity: 1;
+}
+
+.novel-info {
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #ff5a5f;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+}
+
+
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+
+
+.profile-icon {
+    font-size: 1.8em;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.profile-icon:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.8em;
+    color: #333;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.light-novels h3 {
+    font-size: 2em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.novel-carousel {
+    display: grid;
+    gap: 20px; 
+}
+
+.novel-card {
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.novel-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.novel-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.novel-info {
+    padding: 15px;
+}
+
+.novel-info .title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.novel-info .synopsis {
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.5;
+    height: 120px; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 768px) {
+    .novel-info .title {
+        font-size: 1.1em;
+    }
+
+    .novel-info .synopsis {
+        font-size: 0.85em;
+    }
+}
+
+@media (max-width: 480px) {
+    .novel-info .title {
+        font-size: 1em;
+    }
+
+    .novel-info .synopsis {
+        font-size: 0.8em;
+    }
+}
+
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.light-novels h3 {
+    font-size: 2em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.novel-carousel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 20px;
+}
+
+.novel-card {
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.novel-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.novel-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.novel-info {
+    padding: 15px;
+}
+
+.novel-info .title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.novel-info .synopsis {
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.5;
+    height: 120px; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.trending-movies h3 {
+    font-size: 2em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.trending-list {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 20px;
+}
+
+.movie-card {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.ranking {
+    font-size: 3em;
+    color: #ff6347;
+    font-weight: bold;
+    padding: 0 20px;
+    flex-shrink: 0;
+}
+
+.movie-card img {
+    width: 120px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.movie-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.movie-info .title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.movie-info .watch-now {
+    display: none;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.movie-card:hover .watch-now {
+    display: inline-block;
+}
+
+/* Chatbot styling */
+.chat-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chat-box {
+    height: 300px;
+    overflow-y: scroll;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.chat-input {
+    display: flex;
+    padding: 10px;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.popular-shows, .genres, .newsletter {
+    padding: 20px 0;
+}
+.popular-shows .container, .genres .container, .newsletter .container {
+    max-width: 1200px;
+    margin: auto;
+}
+.popular-shows h3, .genres h3, .newsletter h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.genre-tags {
+    display: flex;
+    gap: 10px;
+}
+.genre-tags span {
+    padding: 10px 15px;
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.genre-tags span:hover {
+    background-color: #3498db;
+    color: white;
+}
+
+.newsletter form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.newsletter input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.newsletter button {
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer {
+    background-color: #333;
+    color: #ddd;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer p {
+    margin-bottom: 10px;
+}
+.footer-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+.footer-links a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 14px;
+}
+.footer-links a:hover {
+    color: #3498db;
+}
+.social-media {
+    margin-top: 10px;
+}
+.social-media a {
+    color: #ddd;
+    margin: 0 5px;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+.social-media a:hover {
+    color: #3498db;
+}
+
+
+.chat-input button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.user-message, .bot-message {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.recommendation-card {
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    width: 200px;
+    margin: 10px;
+}
+
+.recommendation-card:hover {
+    transform: scale(1.05); 
+}
+
+.watch-now-btn {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff5722;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.recommendation-card:hover .watch-now-btn {
+    display: block;
+    opacity: 1;
+}
+
+
+.user-message {
+    background-color: #d1ecf1;
+    text-align: right;
+}
+
+.bot-message {
+    background-color: #e2e3e5;
+}
+
+
+.movie-info .watch-now:hover {
+    background-color: #ff4500;
+}
+
+@media (min-width: 768px) {
+    .trending-list {
+        grid-template-columns: 1fr 1fr; 
+    }
+
+    .movie-card img {
+        width: 150px;
+        height: 220px;
+    }
+
+    .ranking {
+        font-size: 3.5em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .trending-list {
+        grid-template-columns: 1fr 1fr 1fr; 
+    }
+
+    .movie-card img {
+        width: 180px;
+        height: 260px;
+    }
+
+    .ranking {
+        font-size: 4em;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .novel-info .title {
+        font-size: 1.1em;
+    }
+
+    .novel-info .synopsis {
+        font-size: 0.85em;
+    }
+}
+
+@media (max-width: 480px) {
+    .novel-info .title {
+        font-size: 1em;
+    }
+
+    .novel-info .synopsis {
+        font-size: 0.8em;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    header .hamburger {
+        display: block;
+    }
+
+    header nav ul {
+        display: none;
+    }
+
+    header .auth-buttons,
+    header .upgrade-premium {
+        display: none;
+    }
+
+    .hero-text h2 {
+        font-size: 2.5em;
+    }
+
+    .hero-text h1 {
+        font-size: 1.2em;
+    }
+
+    .hero-container {
+        justify-content: center;
+    }
+
+    .more-like-this .carousel {
+        overflow-x: auto;
+    }
+
+    .more-like-this .card {
+        width: 150px;
+    }
+}

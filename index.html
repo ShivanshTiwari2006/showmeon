@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+   <link rel="stylesheet" href="/styles/register.css">
+   <title>Sign In | ShowMeOn</title>
+</head>
+<body>
+   <div class="container">
+      <div class="login-section">
+         <div class="logo">ShowMeOn</div>
+         <form id="loginForm">
+            <div class="field">
+               <span class="icon fas fa-user"></span>
+               <input type="text" id="username" required>
+               <label>Username</label>
+            </div>
+            <div class="field">
+               <span class="icon fas fa-lock"></span>
+               <input type="password" id="password" required>
+               <label>Password</label>
+            </div>
+            <div class="extra-options">
+               <label><input type="checkbox"> Remember me</label>
+               <a href="#">Forgot Password?</a>
+            </div>
+            <button type="submit">Login</button>
+            <div class="sign-up">
+               Not a member? <a href="#">Sign up now</a>
+            </div>
+         </form>
+      </div>
+      
+      <div class="welcome-section">
+         <div class="overlay"></div>
+         <h1>Welcome.</h1>
+         <p>Discover the world of cinema like never before. Your Movies your favorite movies and shows on ShowMeOn.</p>
+      </div>
+   </div>
+
+   <script>
+      document.getElementById("loginForm").addEventListener("submit", function(event) {
+         event.preventDefault(); // Prevent form from submitting
+
+         // Get values of username and password fields
+         const username = document.getElementById("username").value;
+         const password = document.getElementById("password").value;
+
+         // Simple check for admin login
+         if (username === "admin" && password === "admin") {
+            alert("Welcome, Admin! Redirecting to the home page...");
+            window.location.href = "home.html"; // Redirect to home page
+         } else {
+            alert("Invalid username or password. Please try again.");
+         }
+      });
+   </script>
+</body>
+</html>

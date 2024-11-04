@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories - ShowMeOn</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/categories.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>ShowMeOn</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#anime">Anime</a></li>
+                <li><a href="#hollywood">Hollywood</a></li>
+                <li><a href="#tollywood">Tollywood</a></li>
+                <li><a href="#search">Search</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="search-bar" id="search">
+            <input type="text" placeholder="Search for Anime, Hollywood, Tollywood..." id="searchInput">
+            <button onclick="searchMovies()">Search</button>
+        </section>
+
+        <section class="category" id="anime">
+            <h2>Anime</h2>
+            <div class="category-grid">
+                <div class="movie-card">
+                    <img src="anime1.jpg" alt="Anime 1">
+                    <h3>Anime Title 1</h3>
+                </div>
+                <div class="movie-card">
+                    <img src="anime2.jpg" alt="Anime 2">
+                    <h3>Anime Title 2</h3>
+                </div>
+                <div class="movie-card">
+                    <img src="anime3.jpg" alt="Anime 3">
+                    <h3>Anime Title 3</h3>
+                </div>
+                <!-- More Anime Movies -->
+                <div class="more-button">
+                    <button>See More</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="category" id="hollywood">
+            <h2>Hollywood</h2>
+            <div class="category-grid">
+                <div class="movie-card">
+                    <img src="hollywood1.jpg" alt="Hollywood 1">
+                    <h3>Hollywood Title 1</h3>
+                </div>
+                <div class="movie-card">
+                    <img src="hollywood2.jpg" alt="Hollywood 2">
+                    <h3>Hollywood Title 2</h3>
+                </div>
+                <div class="movie-card">
+                    <img src="hollywood3.jpg" alt="Hollywood 3">
+                    <h3>Hollywood Title 3</h3>
+                </div>
+                <!-- More Hollywood Movies -->
+                <div class="more-button">
+                    <button>See More</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="category" id="tollywood">
+            <h2>Tollywood</h2>
+            <div class="category-grid">
+                <div class="movie-card">
+                    <img src="tollywood1.jpg" alt="Tollywood 1">
+                    <h3>Tollywood Title 1</h3>
+                </div>
+                <div class="movie-card">
+                    <img src="tollywood2.jpg" alt="Tollywood 2">
+                    <h3>Tollywood Title 2</h3>
+                </div>
+                <div class="movie-card">
+                    <img src="tollywood3.jpg" alt="Tollywood 3">
+                    <h3>Tollywood Title 3</h3>
+                </div>
+                <!-- More Tollywood Movies -->
+                <div class="more-button">
+                    <button>See More</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ShowMeOn. All rights reserved.</p>
+    </footer>
+
+    <script src="categories.js"></script>
+</body>
+</html>

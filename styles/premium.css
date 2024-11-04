@@ -1,0 +1,256 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #ffdf00;
+    text-shadow: 0 0 5px rgba(255, 223, 0, 0.8);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    background: #ffffff;
+    border-radius: 2px;
+    height: 3px;
+    margin: 4px;
+    width: 25px;
+}
+
+main {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #6b73ff, #000dff);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin-bottom: 50px;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: 700;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 0;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.premium-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.option {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px 20px;
+    margin: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 300px;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, border-color 0.3s;
+    border: 2px solid transparent;
+}
+
+.option:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    background-color: #f0f0f0;
+    border-color: #007bff;
+    box-shadow: 0 0 15px #007bff;
+}
+
+.option h2 {
+    margin-top: 0;
+    font-size: 1.8em;
+    color: #007bff;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.option p {
+    font-size: 1em;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.option button {
+    background-color: #007bff;
+    border: none;
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.option button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #0056b3, 0 0 15px #0056b3;
+}
+
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9em;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 0;
+    line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #343a40;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px 15px;
+    }
+
+    .logo h1 {
+        font-size: 1.5em;
+    }
+
+    .nav-links li a {
+        font-size: 0.9em;
+    }
+
+    .option {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .option h2 {
+        font-size: 1.5em;
+    }
+
+    .option p {
+        font-size: 0.9em;
+    }
+
+    .option button {
+        font-size: 0.9em;
+        padding: 10px 20px;
+    }
+
+    footer {
+        padding: 15px;
+        font-size: 0.8em;
+    }
+}
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-track{
+    background: #dfedff;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(#7e51fa,#f35fe2);
+    border-radius: 17px;
+}
+
+
